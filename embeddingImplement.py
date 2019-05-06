@@ -18,13 +18,14 @@ from sklearn.model_selection import train_test_split
 from keras.models import load_model
 
 
-my_df = pd.read_csv('/home/mimi/Desktop/PFE/DATASETS/datasets.csv',header=None)
+my_df = pd.read_csv('/home/mimi/Desktop/PFE/DATASETS/youtube_comments_fixed.csv',header=None)
+print(my_df)
+#x=my_df[0].values.tolist()
 
-x=my_df[0].values.tolist()
-y=my_df[1].values.tolist()
+#y=my_df[1].values.tolist()
 
-
-SEED = 1000
+'''
+SEED = 100
 x_train, x_validation_and_test, y_train, y_validation_and_test = train_test_split(x, y, test_size=.02, random_state=SEED) #
 
 x_validation, x_test, y_validation, y_test = train_test_split(x_validation_and_test, y_validation_and_test, test_size=.5, random_state=SEED)
@@ -94,3 +95,5 @@ def get_w2v_sum(tweet, size):
         except KeyError:
             continue
     return vec
+
+'''
